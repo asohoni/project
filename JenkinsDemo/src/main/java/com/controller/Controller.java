@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Contoller extends HttpServlet {
+public class Controller extends HttpServlet {
 	
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException,IOException{
 	doPost(request,response);
@@ -19,10 +19,10 @@ public class Contoller extends HttpServlet {
 		String name = request.getParameter("name");
 		
 		String rev = new StringBuilder(name).reverse().toString();
+		rev = "REV"+rev;
 		request.setAttribute("rev", rev);
 		
-		
-		getServletContext().getRequestDispatcher("/rev.jsp");
+		getServletContext().getRequestDispatcher("/rev.jsp").forward(request, response);
 	}
 
 }
