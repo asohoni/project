@@ -20,6 +20,7 @@ public class Controller extends HttpServlet {
 		
 		String rev = new StringBuilder(name).reverse().toString();
 		//rev = "REV"+rev;
+		rev=rev+"and I dont like your name";
 		request.setAttribute("rev", rev);
 		
 		getServletContext().getRequestDispatcher("/rev.jsp").forward(request, response);
