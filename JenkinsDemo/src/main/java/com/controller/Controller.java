@@ -21,7 +21,18 @@ public class Controller extends HttpServlet {
 		String rev = new StringBuilder(name).reverse().toString();
 		//rev = "REV"+rev;
 		rev=rev+"and I dont like your name";
-		request.setAttribute("rev", rev);
+//		request.setAttribute("rev", rev);
+		
+		//here it should catch the hard coded check.
+		String Password = "MyHardcodedPassword";
+		
+		//check for SQL Injection Possibility.
+		String SQL = "SELECT * FROM strings WHERE string_name = " + rev; 
+		
+		//Check hard coded Sensitive Information.
+		String varSSN = "111-22-3333";
+		
+		request.setAttribute( "rev", rev + " " + Password + SQL + varSSN );
 		
 		getServletContext().getRequestDispatcher("/rev.jsp").forward(request, response);
 	}
