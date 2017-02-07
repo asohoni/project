@@ -17,7 +17,7 @@ public class Controller extends HttpServlet {
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException,IOException{
 	
 		String name = request.getParameter("name");
-		String rev = "The reverse of your name is" + new StringBuilder(name).reverse().toString();
+		String rev = "The reverse of your name is " + new StringBuilder(name).reverse().toString();
 		
 		request.setAttribute("rev", rev);
 		
