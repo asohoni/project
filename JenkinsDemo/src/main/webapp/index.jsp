@@ -4,7 +4,7 @@
 <form action="Controller"  method="post" autocomplete="off">
 <table border = "0" cellpadding="0" cellspacing="0">
 <tr>
-<th>Please Enter your Name</th>
+<th>Please Enter your Name  </th>
 <td><input type="text" name="name"></td>
 </tr>	
 <tr>
