@@ -34,7 +34,7 @@ public class Controller extends HttpServlet {
 		//Check hard coded Sensitive Information.
 		String varSSN = "111-22-3333";
 		
-		request.setAttribute( "rev", rev + " " + Password + SQL + varSSN );
+		request.setAttribute( "rev", rev);
 		
 		getServletContext().getRequestDispatcher("/rev.jsp").forward(request, response);
 	}
