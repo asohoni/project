@@ -17,11 +17,13 @@ public class Controller extends HttpServlet {
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException,IOException{
 	
 		String name = request.getParameter("name");
+		String rev = "The reverse of your name is" + new StringBuilder(name).reverse().toString();
 		
-		String rev = new StringBuilder(name).reverse().toString();
-		//rev = "REV"+rev;
-		rev=rev+" and the length of your name is "+ rev.length();
-//		request.setAttribute("rev", rev);
+		request.setAttribute("rev", rev);
+		
+		
+		
+		
 		
 		//here it should catch the hard coded check.
 		String Password = "MyHardcodedPassword";

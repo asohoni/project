@@ -14,6 +14,6 @@ String rev = request.getAttribute("rev").toString();
 
 </head>
 <body>
-<h2>The reverse of your name is <%= rev %></h2>
+<h2><%= rev %></h2>
 </body>
 </html>
